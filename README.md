@@ -1,3 +1,5 @@
+Completed By Ashton Burgess
+
 Program 1 – Time Sheet
 
 Design and write a program that accepts the number of hours worked on each of five work days from the user, then displays different information calculated about those entries as output. 
