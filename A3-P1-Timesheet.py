@@ -5,36 +5,24 @@
 
 #Student #:     Ashton Burgess
 #Student Name:  w0465511
-# def timesheet():
-#     #initailize the list with a list lenth from 0 to 5
-#     timesheet=[]
-#     totalHours=0
-#     #append work hours per day to the list
-#     for i in range(0,5):
-        
-#         hoursThatDay=int(input("Enter hours worked on day(Integeres Only): "))
-#         timesheet.append(hoursThatDay)
-#         #totalHours collects and totals all hours
-#         totalHours+=hoursThatDay
-#     average=totalHours/ 5
-#     print("Enter hours worked on Day#{0}: ".format(timesheet))
-#     print("The total number of hours worked was{0}. ".format(totalHours))
-#     print("The average number of hours worked each day was: {0}".format(average))
 
-
+#Program Will take amount of hours worked, and give back total, average, slack days and highest worked day
+#need a list for hours and position will be day
+#We know the work week is 5 days long
 
 def solidLine():
     print("____________________________________________________")
 
+#get max day
 def highestDay(myList):
     print("(The most hours you worked was on: ")
     mostHours=max(myList)
     maxDay=myList.index(mostHours)
-    print("The most hours worked was on :\n Day#{0} when you worked {1} hours.".format(maxDay+1, mostHours))
+    print("The most hours worked was on :\n Day #{0} when you worked {1} hours.".format(maxDay+1, mostHours))
 
 
 
-
+#get slack days
 def SlackDays(myList):
     print("Days you slacked off(i.e. worked less than 7 hours): ")
     for i in range(len(myList)):
@@ -48,7 +36,7 @@ def main():
     myList=[]
     totalHours=0
 
-    
+    #make list and append hours to the day position
     for count in range(0,5):
         hours=int(input("Enter hours worked on Day #{0}: ".format(count+1)))
         myList.append(hours)
@@ -69,10 +57,4 @@ def main():
 
     SlackDays(myList)
    
- 
-
-
-
-    
-
 main()
